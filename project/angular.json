@@ -33,7 +33,7 @@
               "node_modules/@ng-select/ng-select/themes/default.theme.css"
             ],
             "scripts": [
-              "node_modules/d3/d3.min.js",
+              "src/extension/js/d3.min.js",
               "node_modules/rickshaw/rickshaw.min.js",
               "src/extension/js/extensions.js",
               "src/extension/js/Rickshaw.Graph.RangeSlider.MultiPreview.min.js",
@@ -121,7 +121,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
-              "node_modules/d3/d3.min.js",
+              "src/extension/js/d3.min.js",
               "node_modules/rickshaw/rickshaw.min.js",
               "src/extension/js/extensions.js",
               "src/extension/js/Rickshaw.Graph.RangeSlider.MultiPreview.min.js",
