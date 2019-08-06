@@ -20,7 +20,6 @@ import { OlWMSService } from './service/wms/ol-wms.service';
 import { OlWFSService } from './service/wfs/ol-wfs.service';
 import { GMLParserService } from './utility/gmlparser.service';
 import { LegendService } from './service/wms/legend.service';
-import { NotificationService } from './service/toppanel/notification.service';
 import { OlCSWService } from './service/wcsw/ol-csw.service';
 import { DownloadWcsService } from './service/wcs/download/download-wcs.service';
 import { QueryWMSService} from './service/wms/query-wms.service';
@@ -58,7 +57,6 @@ import { SelectMapBoundingComponent } from './widget/selectmap.bounding';
     FilterPanelService,
     LegendService,
     ImgLoadingDirective,
-    NotificationService,
     QueryWMSService,
     QueryWFSService,
     ManageStateService,

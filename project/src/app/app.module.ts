@@ -30,9 +30,6 @@ import { OlMapZoomComponent } from './openlayermap/olmap.zoom.component';
 import { NgbdModalStatusReportComponent } from './toppanel/renderstatus/renderstatus.component';
 import { OlMapClipboardComponent } from './openlayermap/olmap.clipboard.component';
 
-
-
-import { NotificationComponent } from './toppanel/notification/notification.component';
 import { QuerierModalComponent } from './modalwindow/querier/querier.modal.component';
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -66,7 +63,6 @@ import {BsDropdownModule } from 'ngx-bootstrap/dropdown';
     NgbdModalStatusReportComponent,
     OlMapClipboardComponent,
     InfoPanelComponent,
-    NotificationComponent,
     InfoPanelSubComponent,
     OlMapZoomComponent,
     QuerierModalComponent,
@@ -122,7 +118,6 @@ import {BsDropdownModule } from 'ngx-bootstrap/dropdown';
     OlMapComponent,
     LayerPanelComponent,
     CustomPanelComponent,
-    NotificationComponent,
     OlMapZoomComponent,
     PermanentLinkComponent,
     CatalogueSearchComponent,
