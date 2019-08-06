@@ -9,13 +9,14 @@ import { environment } from '../../../environments/environment';
 
 })
 export class OlmapBaselayerselectorComponent implements OnInit {
-  public selectedLayer = 'OSM';
+  public selectedLayer = 'Road';
   baseMapLayers: any = [];
   constructor(public olMapObject: OlMapObject) {
    }
 
   ngOnInit() {
     this.baseMapLayers = environment.baseMapLayers;
+    this.updateBaseMap('Road');
   }
 
   public updateBaseMap(selected: string) {

@@ -123,9 +123,9 @@ export class OlMapPreviewComponent implements AfterViewInit {
         // Only re-centre and zoom using valid coordinates, otherwise just recentre to middle of Australia
         let newView: olView;
         if (isNaN(reCentrePt[0]) || isNaN(reCentrePt[1])) {
-            newView = new olView({center: Constants.CENTRE_COORD, zoom: 3});
+            newView = new olView({center: Constants.CENTRE_COORD, zoom: 5});
         } else {
-            newView = new olView({center: reCentrePt, zoom: 3});
+            newView = new olView({center: reCentrePt, zoom: 5});
         }
         this.olMapObject.getMap().setView(newView);
     }

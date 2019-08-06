@@ -41,7 +41,7 @@ export class OlMapObject {
   private clickHandlerList: ((p: any) => void )[] = [];
   private ignoreMapClick = false;
   private baseLayers = [];
-  private baseMapLayers = [{ value: 'OSM', viewValue: 'OpenStreetMap', layerType: 'OSM' }];
+  private baseMapLayers = [{ value: 'Road', viewValue: 'Bing Roads', layerType: 'Bing' }];
   constructor(private renderStatusService: RenderStatusService , @Inject('env') private env) {
     if (env !== null) {
       this.baseMapLayers = env.baseMapLayers;
@@ -91,7 +91,7 @@ export class OlMapObject {
       layers: this.baseLayers,
       view: new olView({
         center: Constants.CENTRE_COORD,
-        zoom: 4
+        zoom: 5
       })
     });
 
