@@ -19,5 +19,5 @@ steps:
     cd project
     npm install -g @angular/cli
     npm install
-    ng build --prod --env=production
+    ng build --prod -env=production
   displayName: 'npm install and build'
