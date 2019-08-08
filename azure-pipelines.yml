@@ -27,8 +27,11 @@ steps:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/project/ng'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Explorer-UI.$(Build.BuildId).zip'
     replaceExistingArchive: true
+- bash: echo $(System.DefaultWorkingDirectory)/project/ng
+- bash: dir $(System.DefaultWorkingDirectory)
+- bash: dir $(System.DefaultWorkingDirectory)/project
 
 - task: AzureRmWebAppDeployment@4
   inputs:
