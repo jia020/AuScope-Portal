@@ -39,4 +39,4 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'msg-erm-ermexplorer-webapps-rg-dev'
     SlotName: 'preprod'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/ng'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/project/ng'
