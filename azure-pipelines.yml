@@ -10,8 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- bash: dir $(Build.BinariesDirectory) 
-- bash: dir $(System.DefaultWorkingDirectory)
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
@@ -26,7 +24,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/project/ng'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/project/ng'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
