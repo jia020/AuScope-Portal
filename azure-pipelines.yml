@@ -21,3 +21,14 @@ steps:
     npm install
     ng build --prod --configuration=production
   displayName: 'npm install and build'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'MSG ERM Explorer Dev (e5f3cb59-4b6c-464d-b6e2-581943658997)'
+    appType: 'webApp'
+    WebAppName: 'explorer-ui'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'msg-erm-ermexplorer-webapps-rg-dev'
+    SlotName: 'preprod'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.*'
