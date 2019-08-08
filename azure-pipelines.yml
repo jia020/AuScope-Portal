@@ -10,7 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- bash: echo This is the binary dir $(Build.BinariesDirectory) and this is the default working dir $(System.DefaultWorkingDirectory)
+- bash: dir $(Build.BinariesDirectory) 
+- bash: dir $(System.DefaultWorkingDirectory)
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
