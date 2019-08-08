@@ -22,12 +22,11 @@ steps:
     ng build --prod --configuration=production
   displayName: 'npm install and build'
 
-- bash: echo $(System.DefaultWorkingDirectory)/project/ng
-- bash: dir $(System.DefaultWorkingDirectory)
-- bash: dir $(System.DefaultWorkingDirectory)/project
+- bash: dir $(System.DefaultWorkingDirectory)/ng
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/project/ng'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/ng'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/Explorer-UI.$(Build.BuildId).zip'
@@ -43,4 +42,4 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'msg-erm-ermexplorer-webapps-rg-dev'
     SlotName: 'preprod'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/project/ng'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/ng'
