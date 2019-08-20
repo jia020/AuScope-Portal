@@ -91,7 +91,7 @@ export class OlMapObject {
       layers: this.baseLayers,
       view: new olView({
         center: Constants.CENTRE_COORD,
-        zoom: 5
+        zoom: 6
       })
     });
 
