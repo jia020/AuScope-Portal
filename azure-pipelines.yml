@@ -24,19 +24,6 @@ steps:
 
 - bash: dir $(System.DefaultWorkingDirectory)/ng
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/ng'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/Explorer-UI.$(Build.BuildId).zip'
-    replaceExistingArchive: true
-
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)/Explorer-UI.$(Build.BuildId).zip'
-    artifact: 'Explorer-UI.$(Build.BuildId).zip'
-
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
