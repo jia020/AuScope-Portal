@@ -45,5 +45,5 @@ steps:
     WebAppName: 'explorer-ui'
     deployToSlotOrASE: true
     ResourceGroupName: 'msg-erm-ermexplorer-webapps-rg-dev'
-    SlotName: 'preprod'
+    SlotName: 'production'
     packageForLinux: '$(System.DefaultWorkingDirectory)/ng'
