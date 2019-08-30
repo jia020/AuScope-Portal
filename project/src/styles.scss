@@ -343,7 +343,7 @@ label {
 /* START map area rules */
 .map-area {
     overflow: hidden;
-    margin-left: $sidebar-width;
+    margin-left: 0; //$sidebar-width;
     padding: 25px;
     position: relative;
     height: calc(100% - #{$navbar-height});
@@ -675,18 +675,13 @@ fieldset.show-fieldset-borders-whitebg legend{
         margin-left: calc(-1.0 * #{$sidebar-width-folded});
         top: $navbar-more-height;
     }
-
+/*
     button.nav.navbar-toggler .nav-index-btn {
         opacity: 0;
         height: 0;
         transition: opacity 0.8s, height 0.8s;
     }
-
-    button.nav.navbar-toggler.collapsed .nav-index-btn {
-        opacity: 1;
-        transition: opacity 0.8s;
-    }
-
+    
     button.nav.navbar-toggler.collapsed .nav-map-btn {
         opacity: 1;
         transition: opacity 0.8s;
@@ -697,6 +692,18 @@ fieldset.show-fieldset-borders-whitebg legend{
         height: 0;
         transition: opacity 0.8s, height 0.8s;
     }
+*/
+    button.nav.navbar-toggler .nav-index-btn {
+        opacity: 0.99;
+        height: 0;
+        transition: opacity 0.8s, height 0.8s;
+    }
+    button.nav.navbar-toggler.collapsed .nav-index-btn {
+        opacity: 1;
+        transition: opacity 0.8s;
+    }
+
+
 
     .navbar {
         height: $navbar-more-height;

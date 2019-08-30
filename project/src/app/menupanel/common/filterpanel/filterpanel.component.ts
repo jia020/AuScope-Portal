@@ -150,7 +150,7 @@ export class FilterPanelComponent implements OnInit {
     }
 
     // If on a small screen, when a new layer is added, roll up the sidebar to expose the map */
-    if ($('#sidebar-toggle-btn').css('display') !== 'none') {
+    if ($('.nav-index-btn').css('opacity') === '0.99') {
       $('#sidebar-toggle-btn').click();
     }
   }
